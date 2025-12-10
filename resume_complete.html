@@ -1,202 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nikit Mehta Resume</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <style>
-
-    @page {
-      size: A4;
-      margin: 10mm, ;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      font-size: 10px;
-      margin: 0;
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-		background-color: #fefefe;
-      color: #333;
-    }
-    .header {
-      border: 2px solid #000;
-      padding: 20px;
-      position: relative;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-    .highlight {
-      position: absolute;
-      bottom: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #fff;
-      padding: 5px 20px;
-      border: 2px solid #000;
-      font-weight: bold;
-    }
-    .contact {
-      margin-top: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-    .contact div {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .icon {
-      color: #444;
-    }
-    h2 {
-      border-bottom: 2px solid #000;
-      padding-bottom: 5px;
-      margin-top: 40px;
-    }
-    p, ul {
-      line-height: 1.6;
-      margin: 10px 0;
-    }
-    tag1 {
-      background: #ddd;
-      padding: 3px 8px;
-      border-radius: 15%;
-      margin: 2px;
-      display: inline-block;
-    }
-    .download-link {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .contact div sup {
-      font-size: 0.75em;
-    }
-#dob-div {
-  display: inline;
-  position: relative;
-}
-
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikit Mehta - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        
+        .skills-grid li {
+            margin-left: 20px;
+            padding: 5px 0;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+        }
+        
+        .experience-item h3 {
+            color: #2c3e50;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        
+        .experience-item .company {
+            color: #555;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .experience-item ul {
+            margin-left: 20px;
+        }
+        
+        .experience-item li {
+            margin-bottom: 8px;
+        }
+        
+        .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .education-item strong {
+            color: #2c3e50;
+            font-size: 1.05em;
+        }
+        
+        .education-item .institution {
+            color: #555;
+        }
+        
+        .education-item .subjects {
+            margin-top: 5px;
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        .tech-category {
+            margin-bottom: 10px;
+        }
+        
+        .tech-category strong {
+            color: #2c3e50;
+        }
+        
+        .languages p {
+            margin-bottom: 8px;
+        }
+        
+        .strengths ul {
+            margin-left: 20px;
+        }
+        
+        .strengths li {
+            margin-bottom: 8px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="resume-div">
-  <div class="header">
-    <h1>Nikit Mehta</h1>
-    <div class="highlight">IT Intern at Nepal Telecom</div>
-    <div class="contact">
-  <div><i class="fas fa-phone icon"></i>9741813742</div>
-  <div><i class="fas fa-envelope icon"></i>nikitmht@gmail.com</div>
-  <div><i class="fas fa-map-marker-alt icon"></i>Imadol, Mahalaxmi-4, Lalitpur-44705, Bagmati, Nepal</div>
-<div>
-  <i class="fas fa-birthday-cake icon"></i>
-  <span id="dob-div">19<sup>th</sup> October, 2000</span>
-</div>
+    <div class="container">
+        <div class="header">
+            <h1>Nikit Mehta</h1>
+            <div class="contact-info">
+                Lalitpur, Mahalaxmi-4, Imadol • Phone: 9741813742<br>
+                Email: <a href="mailto:anstationery1@gmail.com">anstationery1@gmail.com</a><br>
+                Portfolio: <a href="https://ni-kit-mht.github.io/portfolio-react/hire_me" target="_blank">https://ni-kit-mht.github.io/portfolio-react/hire_me</a><br>
+                Availability: Full-Time
+            </div>
+        </div>
 
-</div>
+        <div class="section">
+            <h2>Profile Summary</h2>
+            <p>Detail-oriented content creator and researcher with strong skills in simplifying complex information, fact-verification, and producing clear, engaging Nepali and English content. Experienced in video scripting, filming, basic editing, and managing community interactions across social media platforms. Committed to sharing accurate, verified information and helping the public access government and non-government opportunities.</p>
+        </div>
 
-  </div>
+        <div class="section">
+            <h2>Core Skills</h2>
+            <div class="skills-grid">
+                <ul>
+                    <li>Research & Verification</li>
+                    <li>Policy & Scheme Interpretation</li>
+                    <li>Nepali & English Writing/Speaking</li>
+                    <li>Video Scripting, Filming & Editing</li>
+                    <li>Social Media Communication</li>
+                </ul>
+                <ul>
+                    <li>Fact-Checking & Official Source Validation</li>
+                    <li>Content Design (CapCut, Canva)</li>
+                    <li>Public-Facing Presentation</li>
+                    <li>Community Engagement</li>
+                    <li>Document Simplification</li>
+                </ul>
+            </div>
+        </div>
 
-  <div class="section">
-    <h2>Professional Summary</h2>
-    <p>Adaptive Electronics, Information, and Communication Engineer with a proven track record in designing and implementing innovative solutions. Seeking to leverage expertise in web development, machine learning, embedded systems, and databases to contribute to cutting-edge projects within a forward-thinking organization. Eager to apply technical proficiency, problem-solving skills, and a passion for emerging technologies to drive impactful results and contribute to the advancement of electronic, communication and information systems.</p>
-  </div>
+        <div class="section">
+            <h2>Relevant Experience</h2>
+            <div class="experience-item">
+                <h3>Content Creator / Researcher (Freelance)</h3>
+                <div class="company">Academic and Freelance Projects</div>
+                <ul>
+                    <li>Researched and simplified government notices, programs, education/training opportunities, and public schemes</li>
+                    <li>Verified details by checking official documents, contacting institutions, and cross-referencing credible sources</li>
+                    <li>Created video explainers with scripts, voiceovers, and basic editing using CapCut or similar tools</li>
+                    <li>Explained eligibility, step-by-step processes, and key requirements in simple Nepali/English</li>
+                    <li>Managed comments/messages and responded with accurate, verified information</li>
+                    <li>Designed clean, readable social posts and infographics using Canva</li>
+                </ul>
+            </div>
+        </div>
 
-  <div class="section">
-    <h2>Skills</h2>
-    <p><strong>Languages:</strong> <tag1>HTML</tag1> <tag1>JavaScript</tag1> <tag1>CSS</tag1> <tag1>C</tag1> <tag1>C++</tag1> <tag1>TypeScript</tag1> <tag1>Python</tag1></p>
-    <p><strong>Frameworks:</strong> <tag1>React</tag1> <tag1>NextJS</tag1> <tag1>Django</tag1> <tag1>Flask</tag1></p>
-    <p><strong>Platforms:</strong> <tag1>TailwindCSS</tag1> <tag1>Vite</tag1> <tag1>Streamlit</tag1></p>
-    <p><strong>Softwares:</strong> <tag1>Blender</tag1> <tag1>GIMP</tag1> <tag1>Photoshop</tag1> <tag1>Libre Office</tag1> <tag1>Office Suites</tag1> <tag1>Google Suites</tag1></p>
-    <p><strong>Experience with:</strong> <tag1>Firebase</tag1> <tag1>Database Integration</tag1> <tag1>Auth0 Login</tag1></p>
-  </div>
+        <div class="section">
+            <h2>Additional Project Experience</h2>
+            <ul>
+                <li>Created educational social media content on policies, rights, opportunities, or public information topics</li>
+                <li>Produced short video content explaining complex issues in simple language</li>
+                <li>Worked on research-based assignments requiring fact-verification and policy understanding</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <h2>Experience</h2>
-    <ul>
-      <li>IT Intern at Nepal Telecom</li>
-      <li>Worked on projects using ESP32 and Arduino UNO</li>
-      <li>Conducted machine learning experiments with Random Forest, K-means, TF-IDF, and cosine similarity</li>
-      <li>I am a Self-taught Programmer</li>
-    </ul>
+        <div class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <strong>Bachelor in Electronics, Communication and Information (BEI)</strong> - Currently Enrolled<br>
+                <span class="institution">IOE, Thapathali Campus, Thapathali, Kathmandu</span>
+                <div class="subjects"><strong>Relevant Subjects:</strong> C programming, Object Oriented Programming, Computer Networks, Object Oriented Software Design, Digital Logic, Embedded System, Microprocessor, Control System, Computer Graphics, Data Structure and Algorithm, Database Management System, Operating System, Artificial Intelligence, Multimedia, Web Technologies and Application, Big Data Technologies, Information System, Project Management</div>
+                <div style="margin-top: 8px; color: #555; font-style: italic;">Available 5 hours/day minimum</div>
+            </div>
+            <div class="education-item">
+                <strong>+2 in Science</strong><br>
+                <span class="institution">St. Xavier's College, Maitighar, Kathmandu</span>
+                <div class="subjects"><strong>Relevant Subject:</strong> Computer</div>
+            </div>
+            <div class="education-item">
+                <strong>SEE</strong><br>
+                <span class="institution">Nepal Don Bosco School, Siddhipur, Lalitpur</span>
+                <div class="subjects"><strong>Relevant Subject:</strong> Computer</div>
+            </div>
+        </div>
 
+        <div class="section">
+            <h2>Technical Proficiencies</h2>
+            <div class="tech-category">
+                <strong>Video Tools:</strong> CapCut, VN, mobile editing tools
+            </div>
+            <div class="tech-category">
+                <strong>Design Tools:</strong> Canva, Figma
+            </div>
+            <div class="tech-category">
+                <strong>Productivity:</strong> Google Workspace, MS Office, LibreOffice
+            </div>
+            <div class="tech-category">
+                <strong>Research:</strong> Government portals, NRB resources, CTEVT, RTI-based inquiries, official helplines
+            </div>
+        </div>
 
-    <p><strong>Some of my projects:</strong></p>
-    <ul>
-      <li>Developed a chat app with authentication, group/private chat, and credential management using Django</li>
-      <li>Created a Multiplayer connect-4 game with responsive UI using React and Typescript</li>
-      <li><a href="https://nikitmhtdjango.pythonanywhere.com/accounts/signup/" target="_blank">Chat App Signup</a></li>
-      <li><a href="https://nikitmhtdjango.pythonanywhere.com/chat" target="_blank">Chat App</a></li>
-      <li><a href="https://ni-kit-mht.github.io/connect-4-game/" target="_blank">Connect-4 Game</a></li>
-    </ul>
-  </div>
+        <div class="section languages">
+            <h2>Languages</h2>
+            <p><strong>Nepali:</strong> Native – excellent written & spoken</p>
+            <p><strong>English:</strong> Fluent – excellent written & spoken</p>
+        </div>
 
-  <div class="section">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>Bachelor in Electronics, Communication and Information (BEI)</strong>, IOE, Thapathali Campus, Thapathali, Kathmandu
-        <br/>Relevant Subjects: C programming, Object Oriented Programming, Computer Networks, Object Oriented Software Design, Digital Logic, Embedded System, Microprocessor, Control System, Computer Graphics, Data Structure and Algorithm, Database Management System, Operating System, Artificial Intelligence, Multimedia, Web Technologies and Application, Big Data Technologies, Information System, Project Management
-      </li>
-      <li><strong>+2 in Science</strong>, St. Xavier’s College, Maitighar, Kathmandu<br/>Relevant Subject: Computer</li>
-      <li><strong>SEE</strong>, Nepal Don Bosco School, Siddhipur, Lalitpur<br/>Relevant Subject: Computer</li>
-    </ul>
-  </div>
-</div>
+        <div class="section strengths">
+            <h2>Strengths</h2>
+            <ul>
+                <li>Strong integrity and fact-based communication</li>
+                <li>Confident on camera and in public-facing communication</li>
+                <li>Ability to translate complex bureaucratic documents into easy language</li>
+                <li>Fast learner, proactive researcher, and highly disciplined</li>
+                <li>Genuine interest in helping people access opportunities</li>
+            </ul>
+        </div>
 
-<div class="download-link">
-  <button onclick="downloadResume()">Download PDF Version</button>
-</div>
-<!-- Include html2pdf.js -->
-<script>
-  function downloadResume() {
-    const resumeContent = document.querySelector('.resume-div').innerHTML;
-    const originalContent = document.body.innerHTML;
-
-    // Create a printable version
-    document.body.innerHTML = `
-      <html>
-        <head>
-          <title>Resume - Nikit Mehta</title>
-          <style>
-            @media print {
-              body {
-                margin: 0;
-              }
-  .page-break {
-    page-break-before: always;
-    break-before: always;   
-  }
-            }
-            body {
-              font-family: Arial, sans-serif;
-              width: 210mm;
-              min-height: 297mm;
-              padding: 10mm;
-              box-sizing: border-box;
-            }
-          </style>
-        </head>
-        <body>
-          ${resumeContent}
-        </body>
-      </html>
-    `;
-
-    window.print();
-    document.body.innerHTML = originalContent;
-    window.location.reload(); // Reload to restore any event listeners or scripts
-  }
-</script>
-
-
+        <div class="section">
+            <h2>Availability</h2>
+            <p>Full-time, hybrid role with 5 days/week office presence and 1 remote day flexibility. Ready to start immediately.</p>
+        </div>
+    </div>
 </body>
 </html>

@@ -74,6 +74,12 @@ export default function Navbar() {
             to="/portfolio-react/resume"
             className="capitalize transition-colors text-sm font-medium text-gray-700 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
         >
+            Resume
+        </Link>
+        <Link
+            to="/portfolio-react/hire_me"
+            className="capitalize transition-colors text-sm font-medium text-gray-700 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+        >
             Hire Me
         </Link>
         </div>

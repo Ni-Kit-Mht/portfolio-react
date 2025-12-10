@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { TfiCheckBox } from "react-icons/tfi";
-import { FaQuestionCircle } from "react-icons/fa"; // you can change icon set
 import bgImage from './assets/portfolio-bg.jpeg';
 import "./App.css"
 import Footer from "./Footer";
@@ -14,7 +13,9 @@ import { SiInstagram } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 import { FaFacebook } from "react-icons/fa";
 import { SiTwitch } from "react-icons/si";
+import { FaChess } from "react-icons/fa"; // Import chess icon
 
+// Framer
 motion;
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -272,6 +273,7 @@ function App() {
     </thead>
     <tbody className="text-gray-700 dark:text-gray-300">
       {[
+        {name: "Chess", url:"https://www.chess.com/member/nik-it", icon: <FaChess></FaChess>},
         { name: "Facebook", url: "https://www.facebook.com/nikit.mehta.182", icon: <FaFacebook></FaFacebook> },
         { name: "Instagram", url: "https://www.instagram.com/nikitmht2/" , icon:<SiInstagram></SiInstagram>},
         { name: "YouTube", url: "https://youtube.com/@nikitmehta7112" , icon:<SiYoutube></SiYoutube>},
