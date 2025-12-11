@@ -134,7 +134,7 @@ function App() {
                 When I'm not coding, you'll find me sketching UI ideas, reading tech blogs, or in my stationery retail shop. I'm always eager to learn new things and collaborate with others to bring creative ideas to life.
               </p>
               <p className="mb-4">
-                Feel free to <a href="#contact" className="text-blue-500 underline">get in touch</a> or check out my <a href="/portfolio-react/resume_complete.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">resume</a>.
+                Feel free to <a href="#contact" className="text-blue-500 underline">get in touch</a> or check out my <a href="/portfolio-react/resume_frontend_general.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">resume</a>.
               </p>
             </div>
           </section>
@@ -254,7 +254,7 @@ function App() {
                 I use viber, whatsapp on same number.
               </p>
               <p className="text-lg mb-4">
-                My Email Address: nikitmht@gmail.com.
+                My Email Address: anstationery1@gmail.com.
               </p>
               <p className="text-lg mb-4">
                 You can find me on Facebook, Instagram, YouTube, Twitch, GitHub, LinkedIn, and X.
@@ -283,7 +283,7 @@ function App() {
         { name: "X (Twitter)", url: "https://x.com/Nikit23451551" , icon:<SiX></SiX>},
         { name: "Viber", url: "viber://chat?number=%2B9741813742", icon: <SiViber /> },
         { name: "WhatsApp", url: "https://wa.me/9741813742", icon: <SiWhatsapp /> },
-        { name: "Gmail", url: "mailto:nikitmht@gmail.com", icon: <SiGmail /> },
+        { name: "Gmail", url: "mailto:anstationery1@gmail.com", icon: <SiGmail /> },
       ].map((social) => (
         <tr key={social.name} className="hover:bg-gray-100 dark:hover:bg-gray-800">
           <td className="px-4 py-2 font-medium">{social.name}</td>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import NavbarResume from "./NavbarResume";
 
 export default function Resume() {
@@ -75,9 +76,8 @@ export default function Resume() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {/* PROJECT 1 */}
-          <a
-            href="https://ni-kit-mht.github.io/portfolio-react/hire_me"
-            target="_blank"
+          <Link
+            to="/portfolio-react/hire_me"
             className="block bg-white rounded-xl shadow hover:shadow-lg p-6 transition"
           >
             <h3 className="text-xl font-semibold text-blue-600 mb-2">
@@ -86,7 +86,7 @@ export default function Resume() {
             <p className="text-gray-600 text-sm">
               Would you like to hire me? Check out my Hire Me page showcasing my skills, services, and contact information.
             </p>
-          </a>
+          </Link>
 
           {/* Add your other projects here later */}
         </div>
